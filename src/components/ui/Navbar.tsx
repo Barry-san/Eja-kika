@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import whiteArrow from "../../assets/icons/arrow-white.svg";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +44,7 @@ export function Navbar() {
         className="hidden lg:flex gap-2 justify-between px-4 py-3.5  bg-accent rounded-lg font-bold capitalize"
       >
         Order now
-        <img src="src/assets/icons/arrow-white.svg" />
+        <img src={whiteArrow} />
       </Link>
 
       <button

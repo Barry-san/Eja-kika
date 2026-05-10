@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 import { PageHeader, ScrollingTicker } from "../../components/ui/PageHeader";
 import { SatisfactionBlock } from "../Home/components/About";
+import {
+  about1,
+  about2,
+  experience,
+  quality1,
+  quality2,
+  trueTasteBody,
+  whiteArrow,
+} from "../../icons";
 
 export default function AboutPage() {
   return (
@@ -12,20 +21,20 @@ export default function AboutPage() {
         <div className="grid lg:grid-cols-2 gap-6 md:p-6 items-center justify-between">
           <SatisfactionBlock />
           <article className="flex flex-col gap-4 p-4 font-body">
-            <h3 className="subheading bg-secondary text-primary w-fit">
+            <h3 className="subheading bg-secondary text-primary w-fit fadeInUp">
               About us
             </h3>
-            <h2 className="font-bold text-primary leading-[1.2em] tracking-tight md:text-[36px] lg:text-[46px]">
+            <h2 className="font-bold text-primary leading-[1.2em] tracking-tight md:text-[36px] lg:text-[46px] text-anime-style-3">
               Premium smoked fish made for repeat orders and stronger shelves
             </h2>
-            <p className="text-copy">
+            <p className="text-copy fadeInUp">
               Eja Kika was built to deliver smoked fish with a polished finish,
               dependable supply, and the kind of flavor retailers and households
               return for.{" "}
             </p>
 
-            <div className="flex flex-col gap-3">
-              <img src="src/assets/icons/icon-about-body-1.svg" width={40} />
+            <div className="flex flex-col gap-3 fadeInUp">
+              <img src={about1} width={40} />
               <h2 className="text-primary font-semibold text-xl">
                 Selected for quality, smoked for flavor{" "}
               </h2>
@@ -36,8 +45,8 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3">
-              <img src="src/assets/icons/icon-about-body-2.svg" width={40} />
+            <div className="flex flex-col gap-3 fadeInUp">
+              <img src={about2} width={40} />
               <h2 className="text-primary font-semibold text-xl">
                 Built for households and wholesale buyers
               </h2>
@@ -50,7 +59,7 @@ export default function AboutPage() {
           </article>
         </div>
         <section className="bg-accent/10 py-20 px-4">
-          <h2 className="mx-auto text-center inlie-grid w-fit border rounded-lg subheading">
+          <h2 className="mx-auto text-center inlie-grid w-fit border rounded-lg subheading fadeInUp">
             Our process
           </h2>
           <div className="grid lg:grid-flow-col items-center justify-center gap-5 lg:p-5 my-6">
@@ -62,7 +71,7 @@ export default function AboutPage() {
               />
             </div>
 
-            <div className="flex flex-col gap-5 items-center">
+            <div className="flex flex-col gap-5 items-center fadeInUp">
               <article className="p-5 bg-white flex flex-col gap-5 font-body rounded-[20px]">
                 <h3 className="text-primary font-semibold text-xl">
                   Our Mission
@@ -114,7 +123,7 @@ export default function AboutPage() {
                   className="aspect-[1/0.94] object-cover max-w-full"
                 />
                 <div className="absolute top-5 left-5 z-10 bg-primary text-white p-6 rounded-2xl grid gap-5">
-                  <img src="src/assets/icons/experience.svg" />
+                  <img src={experience} />
                   <h3 className="font-bold text-xl"> 5+ years of experience</h3>
                 </div>
               </figure>
@@ -124,23 +133,23 @@ export default function AboutPage() {
               <h3 className="bg-secondary text-primary px-4 md:pl-10  py-2 rounded-lg w-fit subheading text-balance">
                 Our promise
               </h3>
-              <h2 className="text-[24px] md:text-[36px] lg:text-[46px] leading-[1.2em] tracking-tight font-bold text-primary">
+              <h2 className="text-[24px] md:text-[36px] lg:text-[46px] leading-[1.2em] tracking-tight font-bold text-primary text-anime-style-3">
                 Consistent smoked fish quality in every pack.
               </h2>
-              <p className="text-copy">
+              <p className="text-copy fadeInUp">
                 Every Eja Kika pack is prepared to deliver clean texture, rich
                 flavor, and the dependable taste customers expect.
               </p>
-              <article className="flex flex-col gap-5">
+              <article className="flex flex-col gap-5 fadeInUp">
                 <div className="flex gap-5">
                   <div className="bg-accent w-11.25 h-11.25 lg:w-15 lg:h-15 flex items-center justify-center rounded-full">
                     <img
-                      src="/src/assets/icons/icon-quality-promise-body-1.svg"
+                      src={quality1}
                       alt=""
                       className="aspect-square w-5 lg:w-auto"
                     />
                   </div>
-                  <div className="grid gap-1">
+                  <div className="grid gap-1" data-aos="fadeInUp">
                     <h3 className="text-primary text-[20px] font-bold leading-[1.4em]">
                       Trusted Fish Selection
                     </h3>
@@ -153,7 +162,7 @@ export default function AboutPage() {
                 <div className="flex gap-5">
                   <div className="bg-accent w-11.25 h-11.25 lg:w-15 lg:h-15 flex items-center justify-center rounded-full">
                     <img
-                      src="/src/assets/icons/icon-quality-promise-body-2.svg"
+                      src={quality2}
                       alt=""
                       className="aspect-square w-5 lg:w-auto"
                     />
@@ -173,7 +182,7 @@ export default function AboutPage() {
                   className="bg-accent grid grid-flow-col w-fit gap-3 px-4 py-3.5 text-white font-bold rounded-xl"
                 >
                   <p>Contact Us</p>
-                  <img src="src/assets/icons/arrow-white.svg" />
+                  <img src={whiteArrow} />
                 </Link>
               </article>
             </article>
@@ -194,7 +203,7 @@ export default function AboutPage() {
                 <li>
                   <article className="flex gap-3 item-center">
                     <div className="bg-accent flex items-center rounded-full h-fit w-fit p-4">
-                      <img src="src/assets/icons/benefits/benefit-1.svg" />
+                      <img src="src/assets/icons/benefits/benefit-1" />
                     </div>
                     <div className="flex flex-col gap-3">
                       <h3 className="font-semibold text-primary text-xl">
@@ -302,7 +311,7 @@ export default function AboutPage() {
           </div>
           {/* true taste */}
 
-          <div className="bg-secondary flex flex-col *:flex-1 lg:flex-row *:px-5 py-10 lg:py-25 gap-5">
+          <div className="bg-secondary flex flex-col *:flex-1 lg:flex-row *:px-5 md:px-6 py-10 lg:py-25 gap-5">
             <article className="flex flex-col gap-4 ">
               <section className="grid gap-5">
                 <h3 className="subheading border border-slate-300 text-primary w-fit text-sm">
@@ -319,10 +328,7 @@ export default function AboutPage() {
               </section>
               <div className="flex gap-5">
                 <div className="h-15 w-15 rounded-full bg-accent grid place-content-around">
-                  <img
-                    src="src/assets/icons/icon-true-taste-body.svg"
-                    width={30}
-                  />
+                  <img src={trueTasteBody} width={30} />
                 </div>
                 <div className="grid gap-2.5">
                   <h3 className="text-primary font-bold text-[20px] leading-[1.4em] tracking-tight">

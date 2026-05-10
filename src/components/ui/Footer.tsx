@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { phone } from "../../icons";
 
 export function Footer() {
   return (
@@ -46,7 +47,7 @@ export function Footer() {
 
             <div className="flex items-center gap-2.5">
               <img
-                src="src/assets/icons/phone.svg"
+                src={phone}
                 className="border p-2 rounded-full border-divider"
               />
               <a href={"tel:+16476790341"}>+1 (647) 679-0341</a>

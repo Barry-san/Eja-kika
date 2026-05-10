@@ -3,6 +3,7 @@ import { Input } from "../../components/form/input";
 import { FormGroup } from "../../components/form/wrapper";
 import { PageHeader, ScrollingTicker } from "../../components/ui/PageHeader";
 import { ContactCard } from "./components/Card";
+import { location, phone, whatsapp } from "../../icons";
 
 const REQUIRED_FIELD_ERROR = "Please fill out this field";
 export default function ContactPage() {
@@ -22,17 +23,17 @@ export default function ContactPage() {
       <div className="w-full flex flex-wrap items-between p-5 gap-5 md:p-10 justify-center">
         <ContactCard
           title="Phone"
-          icon="src/assets/icons/phone.svg"
+          icon={phone}
           content={<a href="tel:+16476790341">+1 (647) 679 0341</a>}
         />
         <ContactCard
           title="Pickup / Delivery"
-          icon="src/assets/icons/location.svg"
+          icon={location}
           content={<p>Brantford, Ontario.</p>}
         />
         <ContactCard
           title="Whatsapp"
-          icon="src/assets/icons/whatsapp.svg"
+          icon={whatsapp}
           content={<a href="tel:+16476790341">+1 (647) 679 0341</a>}
         />
       </div>
@@ -136,7 +137,6 @@ export default function ContactPage() {
                   error={errors.message?.message}
                 >
                   <textarea
-                    name="message"
                     className="p-5 w-full rounded bg-divider"
                     id="message"
                     rows={4}

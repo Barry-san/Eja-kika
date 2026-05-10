@@ -1,12 +1,11 @@
-import { useRoutes, type RouteObject } from "react-router-dom";
+import { type RouteObject } from "react-router-dom";
 import Layout from "../components/ui/RootLayout";
 import HomePage from "../pages/Home";
 import ContactPage from "../pages/Contact";
 import AboutPage from "../pages/About";
 import ProductsPage from "../pages/Product";
-// import { Suspense, lazy } from "react";
 
-const routes: RouteObject[] = [
+export const routes: RouteObject[] = [
   {
     path: "/",
     element: <Layout />,
@@ -30,7 +29,3 @@ const routes: RouteObject[] = [
     ],
   },
 ];
-
-export function AppRoutes() {
-  return <>{useRoutes(routes)}</>;
-}
