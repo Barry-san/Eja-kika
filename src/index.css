@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-md: 767px;
+  --breakpoint-lg: 990px;
+  --color-primary: #206746;
+  --color-secondary: #f4f9f0;
+  --color-accent: #9bce71;
+  --color-accent-secondary: #83b757;
+  --color-divider: hsla(0, 0%, 100%, 0.1);
+  --color-copy: #667d72;
+
+  --color-gradient-accent: linear-gradient(
+    90deg,
+    var(--accent-color) 0%,
+    var(--accent-secondary-color) 50%,
+    var(--accent-color) 100%
+  );
+
+  --font-body: "Mona-sans", sans-serif;
+  --font-fa: "Font awesome 6 solid";
+
+  --animate-scroll: scroll;
+}
+
+@font-face {
+  font-family: "Font awesome 6 solid";
+  src:
+    url("/src/assets/fonts/fa-solid-900.woff2") format("woff2"),
+    url("/src/assets/fonts/fa-solid-900.ttf") format("truetype");
+  font-weight: 900;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Font awesome 6 brands";
+  src:
+    url("/src/assets/fonts/fa-brands-400.woff2") format("woff2"),
+    url("/src/assets/fonts/fa-brands-400.ttf") format("truetype");
+  font-weight: 400;
+  font-display: block;
+}
+
+@keyframes spinning {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+@keyframes scroll {
+  from {
+    translate: 0%;
+  }
+
+  to {
+    translate: 100%;
+  }
+}
+
+.rotation {
+  animation-name: spinning;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+}
+
+.rotation:hover {
+  animation-play-state: paused;
+}
+
+.subheading {
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  background-image: url("/src/assets/icons/icon-sub-heading.svg");
+  background-position: left 15px center;
+  background-size: 18px auto;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+}
+/* 
+.arrow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  height: 22px;
+  width: 22px;
+  background-image: url("/src/assets/icons/arrow-white.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+::selection {
+  color: var(--color-primary);
+  background-color: var(--color-accent);
+}
+
+.checklist {
+  list-style-type: square;
+  padding-inline: 0.5rem;
+}
+
+.checklist::marker {
+  font-family: "Font Awesome 6 solid";
+  font-weight: 900;
+  content: "\f14a";
+  color: var(--color-accent);
+}
+
+.rating::after {
+  content: "\f005";
+  color: var(--color-primary);
+  font-family: "Font Awesome 6 solid";
+  font-weight: 900;
+  font-style: normal;
+  line-height: 1;
+  font-size: 1rem;
+}
+@keyframes scrolling {
+  from {
+    translate: 0%;
+  }
+  to {
+    translate: calc(-100%);
+  }
+}
+
+.scrolling {
+  animation: scrolling 20s linear infinite none;
+  animation-direction: none;
+}
