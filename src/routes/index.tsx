@@ -1,9 +1,12 @@
-import { type RouteObject } from "react-router-dom";
+/* eslint-disable react-refresh/only-export-components */
 import Layout from "../components/ui/RootLayout";
-import HomePage from "../pages/Home";
-import ContactPage from "../pages/Contact";
-import AboutPage from "../pages/About";
-import ProductsPage from "../pages/Product";
+import { type RouteObject } from "react-router-dom";
+import { lazy } from "react";
+
+const HomePage = lazy(() => import("../pages/Home"));
+const ContactPage = lazy(() => import("../pages/Contact"));
+const AboutPage = lazy(() => import("../pages/About"));
+const ProductsPage = lazy(() => import("../pages/Product"));
 
 export const routes: RouteObject[] = [
   {

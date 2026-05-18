@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
+import { useTextAnimations } from "../../../animation";
 import { whiteArrow } from "../../../icons";
 
 export function Hero() {
+  useTextAnimations()
   return (
     <div className="grid grid-flow-row lg:grid-cols-2 bg-primary min-h-[80vh] gap-6 font-body">
       <article className="flex flex-col justify-center md:py-5 px-5 lg:px-7.5 gap-5 text-white">
         <h3 className="subheading bg-divider w-fit">Adea Smoked Fish </h3>
 
-        <h1 className="max-w-xl text-[28px] md:text-[36px] lg:text-[46px] leading-[1.2em] tracking-tight font-bold text-anime-style-3">
+        <h1 className="max-w-xl text-[28px] md:text-[36px] lg:text-[46px] leading-[1.2em] tracking-tight font-bold text-anime">
           Premium smoked fish for households, retailers, and wholesale buyers
         </h1>
 
@@ -17,16 +19,28 @@ export function Hero() {
           accounts.
         </p>
 
+
+
         <Link
           to={"/products"}
           className="capitalize px-3.75 py-3.5 bg-accent w-fit rounded-xl inline-flex items-center gap-5 font-bold"
         >
           order now
-          <img src={whiteArrow} height={22} width={22} />
+          <img src={whiteArrow} height={22} width={22} alt="white arrow" />
         </Link>
+
+        <hr className="color-divider h-px" />
+
+        <div className="w-7/10 my-5">
+          <p>
+            We built Eja Kika to make premium smoked fish easy to trust, simple to order, and consistent from pack to pack.
+          </p>
+        </div>
+
+
       </article>
       <div className="flex items-center px-10 fadeInUp">
-        <img src="/hero.png" alt="Hero Image" />
+        <img src="/hero.png" alt="Hero" />
       </div>
     </div>
   );

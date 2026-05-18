@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/a11y/useButtonType: <explanation> */
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import whiteArrow from "../../assets/icons/arrow-white.svg";
@@ -7,11 +8,12 @@ export function Navbar() {
   return (
     <header className="flex items-center justify-between p-5 lg:px-14 lg:py-8 w-full bg-primary text-white border-b border-divider relative">
       <NavLink to={"/"}>
-        <img src="/logo.png" className="max-h-18 shrink"></img>
+        <img src="/logo.png" className="max-h-18 shrink" alt="Eja Kika logo"></img>
       </NavLink>
 
       <nav
         className={` flex flex-col lg:flex-row items-start w-full lg:w-auto bg-accent-secondary lg:bg-transparent absolute lg:static left-0 top-full gap-2 lg:gap-8 capitalize font-semibold py-1 px-5 ${isOpen ? "visible " : "invisible"} lg:visible`}
+        onBlur={() => setIsOpen(!isOpen)}
       >
         <NavLink
           to={"/"}
@@ -44,7 +46,7 @@ export function Navbar() {
         className="hidden lg:flex gap-2 justify-between px-4 py-3.5  bg-accent rounded-lg font-bold capitalize"
       >
         Order now
-        <img src={whiteArrow} />
+        <img src={whiteArrow} alt="right arrow" />
       </Link>
 
       <button

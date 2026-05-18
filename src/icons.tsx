@@ -1,4 +1,10 @@
 import whiteArrow from "./assets/icons/arrow-white.svg";
+import benefit1 from "./assets/icons/benefits/benefit-1.svg"
+import benefit2 from "./assets/icons/benefits/benefit-2.svg"
+import benefit3 from "./assets/icons/benefits/benefit-3.svg"
+import benefit4 from "./assets/icons/benefits/benefit-4.svg"
+import benefit5 from "./assets/icons/benefits/benefit-5.svg"
+import benefit6 from "./assets/icons/benefits/benefit-6.svg"
 import cart from "./assets/icons/cart.svg";
 import contactUs from "./assets/icons/contact-us.svg";
 import experience from "./assets/icons/experience.svg";
@@ -15,19 +21,21 @@ import sparkleWhite from "./assets/icons/sparkle-white.svg";
 import whatsapp from "./assets/icons/whatsapp.svg";
 
 export {
-  whiteArrow,
-  cart,
-  contactUs,
-  experience,
   about1,
   about2,
   aboutImage,
-  quality1,
-  quality2,
-  subHeading,
+  cart,
+  contactUs,
+  experience,
   location,
   phone,
+  quality1,
+  quality2,
   sparkleWhite,
+  subHeading,
   trueTasteBody,
   whatsapp,
+  whiteArrow,
 };
+
+export const benefits = { benefit1, benefit2, benefit3, benefit4, benefit5, benefit6 }

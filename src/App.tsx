@@ -3,7 +3,7 @@ import { useRevealAnimation, useTextAnimations } from "./animation";
 import { routes } from "./routes";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 
 export function AppRoutes() {
   useEffect(() => {

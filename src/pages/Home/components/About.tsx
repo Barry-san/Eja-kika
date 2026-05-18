@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { about1, about2, aboutImage, contactUs } from "../../../icons";
+import { useRevealAnimation, useTextAnimations } from "../../../animation";
 
 export function About() {
+  useTextAnimations();
+  useRevealAnimation();
   return (
     <div className="p-4 md:px-7.5 py-12.5 grid grid-flow-row lg:grid-cols-2 gap-6 items-center">
       <SatisfactionBlock />
@@ -10,7 +13,7 @@ export function About() {
         <h3 className="subheading bg-secondary border-divider text-primary w-fit text-sm md:text-base fadeInUp">
           About us
         </h3>
-        <h2 className="text-2xl md:text-[36px] lg:text-[46px] leading-[1.2em] tracking-[-0.02em] text-primary font-bold text-anime-style-1">
+        <h2 className="text-2xl md:text-[36px] lg:text-[46px] leading-[1.2em] tracking-[-0.02em] text-primary font-bold text-anime">
           Smoked fish made for real meals and repeat customers
         </h2>
 
@@ -49,13 +52,14 @@ export function About() {
 }
 
 export function SatisfactionBlock() {
+  useRevealAnimation();
   return (
-    <article className="flex flex-col gap-5 relative ">
-      <div className="rounded-3xl">
+    <article className="flex flex-col gap-5 relative">
+      <div className="rounded-3xl reveal">
         <img
           src="/images/home/ejakika-1.jpeg"
           alt=""
-          className="aspect-[1/0.578] object-cover w-full rounded-3xl"
+          className="aspect-[1/0.578] object-cover w-full rounded-3xl "
         />
       </div>
       <div className=" grid grid-cols-2 gap-5">
@@ -64,7 +68,7 @@ export function SatisfactionBlock() {
           <h2 className="text-[26px] md:text-4xl ">100%</h2>
           <p className="text-primary text-sm md:text-base">Satisfaction Rate</p>
         </div>
-        <div>
+        <div className="">
           <img
             src="/images/home/ejakika-2.jpg"
             className="h-full w-full object-cover aspect-[1/0.79] rounded-3xl"

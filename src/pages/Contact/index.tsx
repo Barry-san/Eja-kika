@@ -4,8 +4,10 @@ import { FormGroup } from "../../components/form/wrapper";
 import { PageHeader, ScrollingTicker } from "../../components/ui/PageHeader";
 import { ContactCard } from "./components/Card";
 import { location, phone, whatsapp } from "../../icons";
+import { useTextAnimations } from "../../animation";
 
 const REQUIRED_FIELD_ERROR = "Please fill out this field";
+
 export default function ContactPage() {
   type ContactForm = {
     firstName: string;
@@ -16,6 +18,8 @@ export default function ContactPage() {
   };
   const { register, formState } = useForm<ContactForm>();
   const { errors } = formState;
+
+  useTextAnimations();
   return (
     <div className="h-full">
       <PageHeader title="Contact us" />
@@ -61,7 +65,7 @@ export default function ContactPage() {
             {/* <!-- Section Title Start --> */}
             <div className="section-title">
               <h2
-                className="text-[24px] md:text-[32px] lg:text-[46px] font-bold leading-[1.2em] tracking-tight"
+                className="text-[24px] md:text-[32px] lg:text-[46px] font-bold leading-[1.2em] tracking-tight text-anime"
                 data-cursor="-opaque"
               >
                 Request pricing and availability for Eja Kika

@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
+import { useTextAnimations } from "../../animation";
 import { PageHeader, ScrollingTicker } from "../../components/ui/PageHeader";
-import { SatisfactionBlock } from "../Home/components/About";
 import {
   about1,
-  about2,
+  about2, benefits,
   experience,
   quality1,
   quality2,
   trueTasteBody,
-  whiteArrow,
-} from "../../icons";
+  whiteArrow
+} from "../../icons"
+import { SatisfactionBlock } from "../Home/components/About";
 
 export default function AboutPage() {
+  useTextAnimations();
   return (
     <div>
       <PageHeader title={"About us"} />
@@ -34,7 +36,7 @@ export default function AboutPage() {
             </p>
 
             <div className="flex flex-col gap-3 fadeInUp">
-              <img src={about1} width={40} />
+              <img src={about1} width={40} alt="about 1" />
               <h2 className="text-primary font-semibold text-xl">
                 Selected for quality, smoked for flavor{" "}
               </h2>
@@ -46,7 +48,7 @@ export default function AboutPage() {
             </div>
 
             <div className="flex flex-col gap-3 fadeInUp">
-              <img src={about2} width={40} />
+              <img src={about2} width={40} alt="about 2" />
               <h2 className="text-primary font-semibold text-xl">
                 Built for households and wholesale buyers
               </h2>
@@ -121,9 +123,10 @@ export default function AboutPage() {
                 <img
                   src="/images/home/ejakika-1.jpeg"
                   className="aspect-[1/0.94] object-cover max-w-full"
+                  alt="ejakika 1"
                 />
                 <div className="absolute top-5 left-5 z-10 bg-primary text-white p-6 rounded-2xl grid gap-5">
-                  <img src={experience} />
+                  <img src={experience} alt="experience logo" />
                   <h3 className="font-bold text-xl"> 5+ years of experience</h3>
                 </div>
               </figure>
@@ -182,7 +185,7 @@ export default function AboutPage() {
                   className="bg-accent grid grid-flow-col w-fit gap-3 px-4 py-3.5 text-white font-bold rounded-xl"
                 >
                   <p>Contact Us</p>
-                  <img src={whiteArrow} />
+                  <img src={whiteArrow} alt="white arrow" />
                 </Link>
               </article>
             </article>
@@ -197,13 +200,13 @@ export default function AboutPage() {
                 Why customers choose Eja Kika
               </h2>
             </article>
-            <div className="flex *:basis-auto flex-wrap *:px-4 *:shrink-0 *:max-w-full justify-center py-11.5 gap-7">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  *:px-4 *:shrink *:max-w-full justify-center py-11.5 gap-7">
               {/* benefits column 1 start */}
-              <ul className="flex flex-col gap-12.5 items-center md:w-1/2 basis-auto">
+              <ul className="flex flex-col gap-12.5 items-center">
                 <li>
                   <article className="flex gap-3 item-center">
                     <div className="bg-accent flex items-center rounded-full h-fit w-fit p-4">
-                      <img src="src/assets/icons/benefits/benefit-1" />
+                      <img src={benefits.benefit1} alt="benefit 1" />
                     </div>
                     <div className="flex flex-col gap-3">
                       <h3 className="font-semibold text-primary text-xl">
@@ -219,7 +222,7 @@ export default function AboutPage() {
                 <li>
                   <article className="flex gap-3 item-center">
                     <div className="bg-accent flex items-center rounded-full h-fit w-fit p-4">
-                      <img src="src/assets/icons/benefits/benefit-2.svg" />
+                      <img src={benefits.benefit2} alt="benefit 2" />
                     </div>
                     <div className="flex flex-col gap-3">
                       <h3 className="font-semibold text-primary text-xl">
@@ -235,7 +238,7 @@ export default function AboutPage() {
                 <li>
                   <article className="flex gap-3 item-center">
                     <div className="bg-accent flex items-center rounded-full h-fit w-fit p-4">
-                      <img src="src/assets/icons/benefits/benefit-3.svg" />
+                      <img src={benefits.benefit3} alt="benefit 3" />
                     </div>
                     <div className="flex flex-col gap-3">
                       <h3 className="font-semibold text-primary text-xl">
@@ -249,11 +252,11 @@ export default function AboutPage() {
                 </li>
               </ul>
               {/* benefits column 2 start */}
-              <ul className="flex flex-col gap-12.5 items-center order-3 md:order-2 lg:order-3 md:w-1/2 basis-auto">
+              <ul className="flex flex-col gap-12.5 items-center order-3 md:order-2 lg:order-3">
                 <li>
                   <article className="flex gap-3 item-center">
                     <div className="bg-accent flex items-center rounded-full h-fit w-fit p-4">
-                      <img src="src/assets/icons/benefits/benefit-4.svg" />
+                      <img src={benefits.benefit4} alt="benefit 4" />
                     </div>
                     <div className="flex flex-col gap-3">
                       <h3 className="font-semibold text-primary text-xl">
@@ -269,7 +272,7 @@ export default function AboutPage() {
                 <li>
                   <article className="flex gap-3 item-center">
                     <div className="bg-accent flex items-center rounded-full h-fit w-fit p-4">
-                      <img src="src/assets/icons/benefits/benefit-5.svg" />
+                      <img src={benefits.benefit5} alt="benefit 5" />
                     </div>
                     <div className="flex flex-col gap-3">
                       <h3 className="font-semibold text-primary text-xl">
@@ -285,7 +288,7 @@ export default function AboutPage() {
                 <li>
                   <article className="flex gap-3 item-center">
                     <div className="bg-accent flex items-center rounded-full h-fit w-fit p-4">
-                      <img src="src/assets/icons/benefits/benefit-6.svg" />
+                      <img src={benefits.benefit6} alt="benefit 6" />
                     </div>
                     <div className="flex flex-col gap-3">
                       <h3 className="font-semibold text-primary text-xl">
@@ -298,8 +301,8 @@ export default function AboutPage() {
                   </article>
                 </li>
               </ul>
-              <figure className="order-2 md:order-3 lg:order-2 w-full">
-                <img src="/images/about/ejakika-5.jpeg" />
+              <figure className="order-2 md:order-3 lg:order-2 w-full lg:col-span-1 md:col-span-2">
+                <img src="/images/about/ejakika-5.jpeg" alt="eja kika 5" />
               </figure>
             </div>
             <p className="text-center text-primary">
@@ -328,7 +331,7 @@ export default function AboutPage() {
               </section>
               <div className="flex gap-5">
                 <div className="h-15 w-15 rounded-full bg-accent grid place-content-around">
-                  <img src={trueTasteBody} width={30} />
+                  <img src={trueTasteBody} width={30} alt="true tase" />
                 </div>
                 <div className="grid gap-2.5">
                   <h3 className="text-primary font-bold text-[20px] leading-[1.4em] tracking-tight">
@@ -355,6 +358,7 @@ export default function AboutPage() {
               <img
                 src="/images/home/ejakika-2.jpg"
                 className="aspect-[1/0.8] w-full max-w-full object-cover rounded-xl "
+                alt="ejakika 2"
               />
             </figure>
           </div>
