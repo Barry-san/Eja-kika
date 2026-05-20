@@ -1,10 +1,10 @@
 import { useForm } from "react-hook-form";
+import { useTextAnimations } from "../../animation";
 import { Input } from "../../components/form/input";
 import { FormGroup } from "../../components/form/wrapper";
 import { PageHeader, ScrollingTicker } from "../../components/ui/PageHeader";
-import { ContactCard } from "./components/Card";
 import { location, phone, whatsapp } from "../../icons";
-import { useTextAnimations } from "../../animation";
+import { ContactCard } from "./components/Card";
 
 const REQUIRED_FIELD_ERROR = "Please fill out this field";
 
@@ -44,7 +44,7 @@ export default function ContactPage() {
 
       <div className="mx-auto max-w-7xl rounded-2xl p-6">
         {/* <!-- Contact Us Form Start --> */}
-        <div className="grid grid-rows-2 lg:grid-cols-2 justify-center rounded-2xl">
+        <div className="grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 justify-center rounded-2xl ">
           {/* <!-- Google Map Iframe Start --> */}
           <div className="order-2 md:order-1">
             <iframe
