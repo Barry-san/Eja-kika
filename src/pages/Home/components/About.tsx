@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useTextAnimations } from "../../../animation";
+import { useRevealAnimation, useTextAnimations } from "../../../animation";
 import { about1, about2, aboutImage, contactUs } from "../../../icons";
 
 export function About() {
@@ -52,10 +52,9 @@ export function About() {
 }
 
 export function SatisfactionBlock() {
-  useRevealAnimation();
   return (
     <article className="flex flex-col gap-5 relative">
-      <div className="rounded-3xl reveal">
+      <div className="rounded-3xl ">
         <img
           src="/images/home/ejakika-1.jpeg"
           alt=""
