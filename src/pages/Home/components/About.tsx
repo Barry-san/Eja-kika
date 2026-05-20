@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
+import { useTextAnimations } from "../../../animation";
 import { about1, about2, aboutImage, contactUs } from "../../../icons";
-import { useRevealAnimation, useTextAnimations } from "../../../animation";
 
 export function About() {
   useTextAnimations();
-  useRevealAnimation();
+
   return (
     <div className="p-4 md:px-7.5 py-12.5 grid grid-flow-row lg:grid-cols-2 gap-6 items-center">
       <SatisfactionBlock />
