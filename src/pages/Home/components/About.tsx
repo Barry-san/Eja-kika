@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useRevealAnimation, useTextAnimations } from "../../../animation";
+import { useTextAnimations } from "../../../animation";
 import { about1, about2, aboutImage, contactUs } from "../../../icons";
 
 export function About() {
